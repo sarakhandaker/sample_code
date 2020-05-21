@@ -1,5 +1,7 @@
 import React from 'react'
 import Student from './Student'
+import LoaderHOC from '../HOC/LoaderHOC'
+import PrivacyHOC from '../HOC/PrivacyHOC'
 
 function StudentContainer(props) {
   // console.log("Student Container", props)
@@ -12,4 +14,4 @@ function StudentContainer(props) {
   </div>
 }
 
-export default StudentContainer;
+export default PrivacyHOC(LoaderHOC(StudentContainer));
